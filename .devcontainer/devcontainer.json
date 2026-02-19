@@ -1,0 +1,14 @@
+{
+  "name": "codespaces-gui-desktop-lite",
+  "image": "mcr.microsoft.com/devcontainers/base:debian-13",
+  "features": {
+    "ghcr.io/devcontainers/features/desktop-lite:1": {}
+  },
+  "forwardPorts": [6080],
+  "portsAttributes": {
+    "6080": {
+      "label": "Desktop (noVNC)",
+      "onAutoForward": "openBrowser"
+    }
+  }
+}
