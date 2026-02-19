@@ -1,2 +1,129 @@
 # HowTo-GitHub-codespace-GUI
-C++ starter repository with Dev Containers and desktop-lite feature for running GUI applications in GitHub Codespaces via noVNC.
+
+Tento repozitář poskytuje připravené prostředí pro C++ a Python pomocí
+GitHub Codespaces s grafickým rozhraním v prohlížeči.
+
+Není potřeba instalovat žádný software na vlastní počítač.
+
+------------------------------------------------------------------------
+
+## 1. Vytvoření GitHub účtu
+
+Pokud ještě nemáš účet:
+
+1.  Otevři: https://github.com
+2.  Klikni na **Sign up**
+3.  Vytvoř účet a zvol si [silné heslo](https://www.grc.com/haystack.htm)
+4.  Potvrď e-mail
+
+------------------------------------------------------------------------
+
+## 2. Fork repozitáře
+
+1.  Otevři tento repozitář
+2.  Klikni na **Fork** (vpravo nahoře)
+3.  Vyber svůj účet
+
+Vznikne ti vlastní kopie repozitáře.
+
+------------------------------------------------------------------------
+
+## 3. Vytvoření Codespace
+
+1.  Otevři svůj fork repozitáře
+2.  Klikni na **Code**
+3.  Záložka **Codespaces**
+4.  Klikni na `+` **Create a codespace**
+
+Počkej 2–5 minut na vytvoření prostředí.
+
+------------------------------------------------------------------------
+
+## 4. Otevření grafického prostředí
+
+Po spuštění Codespace:
+
+1.  Otevři záložku **Ports**
+2.  Najdi port **6080**
+3.  Klikni na **Open in Browser**
+
+Otevře se nové okno s noVNC pracovní plochou.
+Ještě před připojením ověř, že je vlevo v nastavení:
+- aktivováno `Přizpůsobit oknu`
+- Přizpůsobení velikosti: `Vzdálené`
+
+------------------------------------------------------------------------
+
+## 5. Překlad a spuštění programu
+
+Buď přímo v GUI VSCode, nebo v terminálu:
+
+``` bash
+g++ main.cpp -o main
+```
+
+či pomocí CMake:
+
+``` bash
+cmake -S . -B build
+cmake --build build
+```
+
+### Spuštění
+
+``` bash
+./main
+```
+
+------------------------------------------------------------------------
+
+## 6. Uložení práce (DŮLEŽITÉ)
+
+Pravidelně ukládej změny buď přes git v GUI VSCode, nebo v terminálu:
+
+``` bash
+git status
+git add .
+git commit -m "Moje práce"
+git push
+```
+
+Neuložená práce může být ztracena pokud dojde ke smazání codespace (obvykle 30 dní bez aktivity).
+
+------------------------------------------------------------------------
+
+## 7. Zastavení Codespace (DŮLEŽITÉ)
+
+Po dokončení práce:
+
+1.  Otevři https://github.com/codespaces
+2.  Najdi svůj Codespace
+3.  Klikni na **Stop**
+
+Nezavírej pouze záložku v prohlížeči, protože rychleji vyčerpáš free limit 120 core-hodin měsíčně!
+
+------------------------------------------------------------------------
+
+## 8. Řešení problémů
+
+Zkus resetovat codespace:
+
+1.  V codespace stiskni `F1`
+2.  Vyber **Codespaces: Rebuild Container**
+
+
+------------------------------------------------------------------------
+
+## Souhrn
+
+Před začátkem:
+- \[ \] GitHub účet
+- \[ \] Fork repozitáře
+- \[ \] Codespace vytvořen
+
+Po práci:
+- \[ \] Uloženo (commit + push)
+- \[ \] Codespace zastaven
+
+------------------------------------------------------------------------
+
