@@ -1,4 +1,4 @@
-# HowTo-GitHub-codespace-GUI
+# HowTo GitHub codespace GUI
 
 Tento repozitář poskytuje připravené prostředí pro C++ a Python pomocí
 GitHub Codespaces s grafickým rozhraním v prohlížeči.
@@ -44,8 +44,8 @@ Počkej 2–5 minut na vytvoření prostředí.
 Po spuštění Codespace:
 
 1.  Otevři záložku **Ports**
-2.  Najdi port **6080**
-3.  Klikni na **Open in Browser**
+2.  Najeď myší na řádek s portem **6080**
+3.  Klikni na zobrazenou ikonku **Open in Browser**
 
 Otevře se nové okno s noVNC pracovní plochou.
 Ještě před připojením ověř, že je vlevo v nastavení:
